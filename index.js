@@ -136,6 +136,10 @@ squares.forEach((square, i) => {
 // Close the winner message
 closeButton.addEventListener('click', function() {
     winnerMessage.classList.add('hidden');
+    gameboard.resetBoard();
+    gameController.gameOver = false;
+    gameController.turn = 'X';
+    renderBoard();
 });
 
 // Reset button logic
